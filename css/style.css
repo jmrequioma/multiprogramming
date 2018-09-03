@@ -1,0 +1,40 @@
+#app {
+	background-color: #BADA55;
+}
+
+.res-container {
+	background-color: white;
+	height: 300px;
+	border: solid;
+	padding: auto;
+	margin: auto;
+	overflow-y: auto;
+}
+
+.usr-container {
+	background-color: white;
+	height: 300px;
+	border: solid;
+	padding: auto;
+	margin: auto;
+	overflow-y: auto;
+}
+
+.res-usr-container {
+	background-color: white;
+	height: 600px;
+	border: solid;
+	padding: auto;
+	margin: auto;
+	overflow-y: auto;
+}
+
+.usr-inner-container {
+	background-color: white;
+	height: 200px;
+	border: 3px solid #BADA55;
+	border-radius: 10px;
+	padding: auto;
+	margin: auto;
+	overflow-y: auto;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Multiprogramming</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="row">
+			    <div class="col-sm-6">
+			    	<p>Welcome!</p>
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="col-sm-6">
+			      <button v-on:click="randomize" :disabled="started">Generate Random Fun!!!</button>
+			      <button v-on:click="reset">Reset</button>
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="col-sm-6">
+			      <p>Number of Resources: {{ randNumRes }}</p>
+			    </div>
+			    <div class="col-sm-6">
+			      <p>Number of Users: {{ randNumUsr }}</p>
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="col-sm-6">
+			    	<div class="res-container">
+			    		<ul>
+			    			<li v-for="n in randResObjs">
+			    				resource {{ n.number }}
+			    			</li>
+			    		</ul>
+			      	</div>
+		      	</div>
+		      	<div class="col-sm-6">
+			  		<div class="usr-container">
+			  			<ul>
+			    			<li v-for="n in randNumUsrs">
+			    				user {{ n }}
+			    			</li>
+			    		</ul>
+			  		</div>
+			  	</div>
+		  	</div>
+		  	<div class="row">
+			    <div class="col-sm-4">
+			      <p>Resource Assignment </p>
+			    </div>
+			</div>
+		  	<div class="row">
+		  		<div class="col-sm-12">
+			  		<div class="res-usr-container">
+			  			<ul>
+			    			<li v-for="n in randResObjs">
+			    				resource {{ n.number }} (Total time: {{ n.totalTime }} seconds)
+			    				<div class="usr-inner-container">
+			    					<ul>
+			    						<li v-for="j in n.listOfUsers">
+			    							user {{ j.number }} needs {{ j.useTime}} seconds <b> (Wait for {{ j.waitingTime }} seconds)</b>
+			    						</li>
+			    					</ul>
+			    				</div>
+			    			</li>
+			    		</ul>
+			  		</div>
+			  	</div>
+		  	</div>
+		</div>		
+	</div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
