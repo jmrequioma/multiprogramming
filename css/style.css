@@ -38,3 +38,15 @@
 	margin: auto;
 	overflow-y: auto;
 }
+
+.btn.btn-primary {
+    color: #fff;
+    background-color: #556B2F;
+    border-color: #556B2F;
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #9ACD32;
+    border-color: #2E8B57; /*set the color you want here*/
+}
